@@ -18,18 +18,18 @@
                     <img src="data/svg/arrow-primary.svg" alt="arrow" class="news__content__arrow">
                 </div>
             </li>
-            {#
-            {% for articles in article %} Foreach en gros
+
+            {% for article in articles %}
                 <li class="news">
                     <img src="{{ article.img }}" alt="news" class="news__image">
                     <div class="news__content">
                         <h3 class="news__content__title">J{{ article.title }}</h3>
-                        <p class="news__content__date">{{ article.date }}</p>
+                        <p class="news__content__date">{{ article.date | date("m/d/Y")}}</p>
                         <img src="data/svg/arrow-primary.svg" alt="arrow" class="news__content__arrow">
                     </div>
                 </li>
             {% endfor %}
-            #}
+
         </ul>
     </section>
 {% endblock %}

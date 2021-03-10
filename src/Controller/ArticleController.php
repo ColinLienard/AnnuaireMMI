@@ -4,6 +4,8 @@
 namespace App\Controller;
 
 
+use App\Entity\Articles;
+use App\Repository\ArticlesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -12,17 +14,26 @@ use Symfony\Component\Routing\Annotation\Route;
 class ArticleController extends AbstractController
 {
 
-    public function __construct()
-    {
+    /**
+     * @var ArticlesRepository
+     */
+    private $repository;
 
+    public function __construct(ArticlesRepository $repository)
+    {
+        $this->repository = $repository;
     }
 
     /**
-     * @Route("/articles", name="articles.list")
+     * @Route("/article", name="articles.list")
      * @return Response
      */
 
     public function list(): Response{
-        return $this->render("pages/articles.html.twig");
+        $articles = $this->repository->findAll();
+
+        return $this->render("pages/articles.html.twig", [
+            'articles' => $articles
+        ]);
     }
 }
