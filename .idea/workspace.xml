@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1ce222-b6af-4488-abff-83d327aff4b6" name="Default Changelist" comment="" />
+    <list default="true" id="7b1ce222-b6af-4488-abff-83d327aff4b6" name="Default Changelist" comment="Symfony 5.2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +27,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -47,8 +52,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615739587954</updated>
-      <workItem from="1615739590560" duration="433000" />
+      <workItem from="1615739590560" duration="1054000" />
     </task>
+    <task id="LOCAL-00001" summary="Symfony 5.2">
+      <created>1615740157493</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615740157493</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -64,5 +77,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Symfony 5.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Symfony 5.2" />
   </component>
 </project>
