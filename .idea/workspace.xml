@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1ce222-b6af-4488-abff-83d327aff4b6" name="Default Changelist" comment="Ckeditor + Elfinder configuration">
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+    <list default="true" id="7b1ce222-b6af-4488-abff-83d327aff4b6" name="Default Changelist" comment="EasyAdmin + Dashboard">
+      <change afterPath="$PROJECT_DIR$/public/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/img/others/actus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/img/others/diplomes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/img/others/etudiant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/img/others/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/img/others/news.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/img/others/offres.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/img/others/portesouvertes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/img/others/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/arrow-primary.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/arrow-white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/filter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/menu-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/search.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/fm_elfinder.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/fm_elfinder.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/fos_ckeditor.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/fos_ckeditor.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,11 +159,28 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MMI-TEST" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projetTutS4\MMI-Space\public\data\svg" />
+      <recent name="C:\wamp64\www\projetTutS4\MMI-Space\public\data\img\others" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projetTutS4\MMI-Space\templates\pages\article" />
+      <recent name="C:\wamp64\www\projetTutS4\MMI-Space\public\css" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
@@ -170,7 +206,7 @@
       <option name="presentableId" value="Default" />
       <updated>1615739587954</updated>
       <workItem from="1615739590560" duration="1717000" />
-      <workItem from="1615741330663" duration="1387000" />
+      <workItem from="1615741330663" duration="14456000" />
     </task>
     <task id="LOCAL-00001" summary="Symfony 5.2">
       <created>1615740157493</created>
@@ -193,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615742257225</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="EasyAdmin + Dashboard">
+      <created>1615742811007</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615742811007</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +258,11 @@
     <MESSAGE value="Symfony 5.2" />
     <MESSAGE value="Ckeditor" />
     <MESSAGE value="Ckeditor + Elfinder configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ckeditor + Elfinder configuration" />
+    <MESSAGE value="EasyAdmin + Dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="EasyAdmin + Dashboard" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

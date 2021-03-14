@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+{% block title %}MMI Space - Les Actus{% endblock %}
+
+{% block body %}
+
+    <header class="header">
+        <h1 class="header__title">Les Actus</h1>
+        <p class="header__subtitle">Retrouvez ici toutes les dernières news importantes et restez au courant de tout !</p>
+        <img src="data/img/others/actus.png" alt="actus" class="header__image">
+    </header>
+
+    <section class="main">
+        <h3 class="main__title">News récentes</h3>
+        {% if articles != null %}
+            <ul class="main__list">
+                {% for article in articles %}
+                    <li class="news">
+                        <a href="#" class="news__link">
+                            <img src="data/img/others/news.png" alt="news" class="news__image">
+                            <div class="news__content">
+                                <h3 class="news__content__title">{{ article.title }}</h3>
+                                <p class="news__content__date">{{ article.createdAt | date("d/m/Y")}}</p>
+                                <img src="data/svg/arrow-primary.svg" alt="arrow" class="news__content__arrow">
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+
+{% endblock %}
