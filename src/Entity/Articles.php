@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\ArticlesRepository;
+use Cocur\Slugify\Slugify;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -105,5 +106,10 @@ class Articles
         $this->title = $title;
 
         return $this;
+    }
+
+    public function getSlug(): string
+    {
+        return (new Slugify())->slugify($this->title);
     }
 }

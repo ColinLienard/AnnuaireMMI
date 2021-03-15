@@ -33,12 +33,20 @@ class ArticlesCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new("id")->onlyOnIndex(),
+            IdField::new("id")
+                ->onlyOnIndex(),
             TextField::new("title","Titre"),
             TextField::new("author","Auteur"),
-            TextField::new("img","Image"),
-            TextEditorField::new('content',"Contenu")->setFormType(CKEditorType::class)->onlyOnForms(),
-            DateField::new('created_at',"Date")->onlyOnIndex(),
+            ImageField::new("img","Image")
+                ->setBasePath("/data/img/article")
+                ->setUploadDir('public/data/img/article')
+                ->setUploadedFileNamePattern(uniqid(rand()) . ".[extension]")
+                ->setRequired(false),
+            TextEditorField::new('content',"Contenu")
+                ->setFormType(CKEditorType::class)
+                ->onlyOnForms(),
+            DateField::new('created_at',"Date")
+                ->onlyOnIndex(),
         ];
     }
 }

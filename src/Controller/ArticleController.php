@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Articles;
 use App\Repository\ArticlesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -32,6 +33,26 @@ class ArticleController extends AbstractController
 
         return $this->render("pages/article/articleList.html.twig", [
             'articles' => $articles
+        ]);
+    }
+
+    /**
+     * @Route("/article/{slug}-{id}", name="article.show", requirements={"slug": "[a-z0-9\-]*"})
+     * @param Articles $article
+     * @param string $slug
+     * @return Response
+     */
+    public function show(Articles $article,string $slug): Response{
+
+        if($article->getSlug() !== $slug){
+            return $this->redirectToRoute('article.show',[
+                'id' => $article->getId(),
+                'slug' => $article->getSlug(),
+            ], 301);
+        }
+
+        return $this->render('pages/article/articleShow.html.twig', [
+            'article' => $article
         ]);
     }
 }

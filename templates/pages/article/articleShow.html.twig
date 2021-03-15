@@ -2,17 +2,17 @@
 
 {% block body %}
     <header class="news-header">
-        <img src="data/img/others/news.png" alt="news" class="news-header__image">
+        <img src="{{ asset('data/img/others/news.png') }}" alt="news" class="news-header__image">
         <h2 class="news-header__title">{{ article.title }}</h2>
         <p class="news-header__author">par {{ article.author }}</p>
         <p class="news-header__date">{{ article.createdAt | date("d/m/Y")}}</p>
-        <a href="#" class="news-header__back-button">
-            <img src="data/svg/arrow-white.svg" alt="arrow" class="news-header__back-button__arrow">
+        <a href="{{ path('article.list') }}" class="news-header__back-button">
+            <img src="{{ asset('data/svg/arrow-white.svg') }}" alt="arrow" class="news-header__back-button__arrow">
         </a>
     </header>
 
     <section class="news-content">
-        {{ article.content }}
+        {{ article.content | raw }}
     </section>
 
 {% endblock %}
