@@ -37,7 +37,7 @@ class ArticlesCrudController extends AbstractCrudController
                 ->onlyOnIndex(),
             TextField::new("title","Titre"),
             TextField::new("author","Auteur"),
-            ImageField::new("img","Image")
+            ImageField::new("img","Miniature")
                 ->setBasePath("/data/img/article")
                 ->setUploadDir('public/data/img/article')
                 ->setUploadedFileNamePattern(uniqid(rand()) . ".[extension]")

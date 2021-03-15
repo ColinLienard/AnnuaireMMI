@@ -5,6 +5,7 @@ twig:
         - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
 
 fos_ck_editor:
+    default_config: main_config
     configs:
         main_config:
             local: 'fr'
@@ -13,3 +14,8 @@ fos_ck_editor:
                 - { name: "styles", items: ['Bold', 'Italic', 'Underline', 'Strike', 'Blockquote', '-', 'Link', '-', 'RemoveFormat', '-', 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'Image', 'Table', '-', 'Styles', 'Format','Font','FontSize', '-', 'TextColor', 'BGColor', 'Source'] }
             filebrowserBrowseRoute: elfinder
             filebrowserBrowseRouteParameters: []
+        offer:
+            local: 'fr'
+            language: fr
+            toolbar:
+                - { name: "styles", items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Blockquote','RemoveFormat', '-', 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'Table', '-', 'Styles', 'Format','Font','FontSize', '-', 'TextColor', 'BGColor', 'Source' ] }
