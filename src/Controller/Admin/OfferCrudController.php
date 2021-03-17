@@ -9,7 +9,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TelephoneField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
@@ -45,12 +46,14 @@ class OfferCrudController extends AbstractCrudController
                 ->setChoices(["Communication" => "Communication","Graphisme" => "Graphisme","Développement" => "Développement"]),
             ChoiceField::new('type','Type de contrat')
                 ->setChoices(["Non renseigné" => "Non renseigné","CDD" => "CDD","CDI" => "CDI"]),
-            TextField::new("region","Region"),
-            TextField::new("city","Ville")
-                ->onlyOnForms(),
+            IntegerField::new("department","Département"),
+            TextField::new("city","Ville"),
             TextEditorField::new('description','Description')
                 ->setFormType(CKEditorType::class)
                 ->setFormTypeOptionIfNotSet("config_name","offer")
+                ->onlyOnForms(),
+            MoneyField::new('salary',"Salaire à l'année")
+                ->setCurrency("EUR")
                 ->onlyOnForms(),
             TextField::new("name","Nom Prénom")
                 ->onlyOnForms(),

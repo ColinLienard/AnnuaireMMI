@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1ce222-b6af-4488-abff-83d327aff4b6" name="Default Changelist" comment="Admin article + view article &#10;Manque:&#10;  - Affiche article seulement&#10;  - Image Admin Article">
+    <list default="true" id="7b1ce222-b6af-4488-abff-83d327aff4b6" name="Default Changelist" comment="BackEnd des offres d'emploi + instance CkEDITOR (offer)">
+      <change afterPath="$PROJECT_DIR$/src/Controller/OffersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/offer/offerList.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/offer/offerShow.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MMI-Space.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MMI-Space.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/fos_ckeditor.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/fos_ckeditor.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticlesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticlesCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210314173643.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210314183409.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210315200055.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/OfferCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/OfferCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Offer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/article/articleList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/article/articleList.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,14 +142,20 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
       <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
       <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1pkuowYf3qUkGDMafLNjioAiqy3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -152,7 +171,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="discord-application" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.PHP" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -187,7 +206,9 @@
       <updated>1615739587954</updated>
       <workItem from="1615739590560" duration="1717000" />
       <workItem from="1615741330663" duration="14567000" />
-      <workItem from="1615796802728" duration="23975000" />
+      <workItem from="1615796802728" duration="24267000" />
+      <workItem from="1615901475513" duration="17310000" />
+      <workItem from="1615988623146" duration="318000" />
     </task>
     <task id="LOCAL-00001" summary="Symfony 5.2">
       <created>1615740157493</created>
@@ -231,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615811704414</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="BackEnd des offres d'emploi + instance CkEDITOR (offer)">
+      <created>1615850433086</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615850433086</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +284,8 @@
     <MESSAGE value="EasyAdmin + Dashboard" />
     <MESSAGE value="Admin article + view article &#10;Manque:&#10;  - Affiche article seulement&#10;  - Image Admin Article" />
     <MESSAGE value="Affichage Article" />
-    <option name="LAST_COMMIT_MESSAGE" value="Affichage Article" />
+    <MESSAGE value="BackEnd des offres d'emploi + instance CkEDITOR (offer)" />
+    <option name="LAST_COMMIT_MESSAGE" value="BackEnd des offres d'emploi + instance CkEDITOR (offer)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

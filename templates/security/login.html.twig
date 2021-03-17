@@ -1,0 +1,67 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMI Space - Se connecter</title>
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+
+<nav class="nav">
+    <img src="{{ asset('data/img/others/logo.png') }}" alt="logo" class="nav__logo">
+    <a href="#" class="nav__back-button">
+        <img src="{{ asset('data/svg/arrow-white.svg') }}" alt="arrow" class="nav__back-button__arrow">
+        Retour à l'accueil
+    </a>
+</nav>
+
+<header class="header">
+    <h1 class="header__title">Connexion</h1>
+</header>
+
+<section class="main">
+    <p class="main__paragraph">Connectez-vous avec votre identifiant et votre mot de passe transmis par mail. Ce site est réservé aux professeurs ou étudiants en MMI à Limoges.</p>
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {#
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+    #}
+
+    <form action="{{ path('app_login') }}" method="post" class="main__form">
+
+        <label class="main__form__title" for="inputEmail">Adresse mail</label>
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Votre adresse mail..." class="main__form__input">
+
+        <label class="main__form__title" for="inputPassword">Mot de passe</label>
+        <input type="password" name="password" id="inputPassword" placeholder="Votre mot de passe..." class="main__form__input">
+
+        <a href="#" class="main__form__link">Mot de passe oublié ?</a>
+        <input type="submit" value="Se connecter" class="main__form__button">
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+    </form>
+
+    {#
+    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+    See https://symfony.com/doc/current/security/remember_me.html
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" name="_remember_me"> Remember me
+        </label>
+    </div>
+    #}
+</section>
+
+</body>
+</html>

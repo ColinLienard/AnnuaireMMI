@@ -16,11 +16,11 @@
                 {% for article in articles %}
                     <li class="news">
                         <a href="{{ path('article.show', {id: article.id, slug: article.slug}) }}" class="news__link">
-                            <img src="data/img/others/news.png" alt="news" class="news__image">
+                            <img src="{{ asset('data/img/others/news.png') }}" alt="news" class="news__image">
                             <div class="news__content">
                                 <h3 class="news__content__title">{{ article.title }}</h3>
                                 <p class="news__content__date">{{ article.createdAt | date("d/m/Y")}}</p>
-                                <img src="data/svg/arrow-primary.svg" alt="arrow" class="news__content__arrow">
+                                <img src="{{ asset('data/svg/arrow-primary.svg') }}" alt="arrow" class="news__content__arrow">
                             </div>
                         </a>
                     </li>

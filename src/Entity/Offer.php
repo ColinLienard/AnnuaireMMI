@@ -38,9 +38,9 @@ class Offer
     private $company;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      */
-    private $region;
+    private $department;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -48,7 +48,7 @@ class Offer
     private $city;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $salary;
 
@@ -135,14 +135,14 @@ class Offer
         return $this;
     }
 
-    public function getRegion(): ?string
+    public function getDepartment(): ?int
     {
-        return $this->region;
+        return $this->department;
     }
 
-    public function setRegion(string $region): self
+    public function setDepartment(int $department): self
     {
-        $this->region = $region;
+        $this->department = $department;
 
         return $this;
     }
@@ -159,12 +159,12 @@ class Offer
         return $this;
     }
 
-    public function getSalary(): ?string
+    public function getSalary(): ?int
     {
         return $this->salary;
     }
 
-    public function setSalary(string $salary): self
+    public function setSalary(?int $salary): self
     {
         $this->salary = $salary;
 

@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+{% block title %}MMI Space - Les Offres d'Emploie{% endblock %}
+
+{% block body %}
+
+    <header class="header">
+        <h1 class="header__title">Offres d'emploi</h1>
+        <p class="header__subtitle">Retrouvez ici des opportunités à ne pas négliger. C’est peut-être votre futur job !</p>
+        <img src="{{ asset("data/img/others/offres.png") }}" alt="actus" class="header__image">
+    </header>
+
+    <section class="main">
+        <h3 class="main__title">Offres récentes</h3>
+        {% if offers != null %}
+            <ul class="main__list">
+                {% for offer in offers %}
+                    <li class="offer">
+                        <a href="{{ path("offer.show", {id: offer.id}) }}" class="offer__link">
+                            <h3 class="offer__title">{{ offer.title }}</h3>
+                            <p class="offer__description">{{ offer.company }}<br>{{ offer.city }} ({{ offer.department }}){% if offer.salary != null %}<br>{{offer.salary}} / an{% endif %}</p>
+                            <div class="offer__button">Voir</div>
+                            <p class="offer__date">Le {{ offer.createdAt | date("d/m/Y") }}</p>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+
+{% endblock %}
