@@ -1,0 +1,60 @@
+{% extends "base.html.twig" %}
+{% block title %}MMI Space - Les Diplomés{% endblock %}
+
+{% block body %}
+    <header class="header">
+        <h1 class="header__title">Les diplômés</h1>
+        <p class="header__subtitle">Cette page regroupe tous les titulaires du DUT MMI de Limoges.</p>
+        <img src="{{ asset('data/img/others/diplomes.png') }}" alt="diplomes" class="header__image">
+    </header>
+
+    <section class="main">
+        <div class="main__search-container">
+            <button class="main__button filter-button">
+                <img src="{{ asset('data/svg/filter.svg') }}" alt="filter" class="main__button__image">
+                Filtres
+            </button>
+            <div class="main__search">
+                <img src="{{ asset('data/svg/search.svg') }}" alt="search" class="main__search__image">
+                <input type="text" placeholder="Un étudiant..." class="main__search__input">
+            </div>
+            <div class="main__popup filter-popup invisible">
+                <form action="post" class="main__popup__form">
+                    <input type="text" placeholder="Drop-down menu" class="main__popup__form__input">
+                    <input type="text" placeholder="Drop-down menu" class="main__popup__form__input">
+                    <input type="text" placeholder="Drop-down menu" class="main__popup__form__input">
+                    <input type="text" placeholder="Drop-down menu" class="main__popup__form__input">
+                    <input type="submit" value="Rechercher" class="main__popup__form__button">
+                </form>
+            </div>
+        </div>
+        <h3 class="main__title">Les plus consultés</h3>
+        {% if graduates != null %}
+            <ul class="main__grid">
+                {% for graduate in graduates %}
+                <li class="student-card">
+                    <a href="{{ path('graduate.show', {id: graduate.id, slug: graduate.slug}) }}" class="student-card__link">
+                        <div class="student-card__image-container">
+                            <img src="{{ asset('data/img/user/' ~ graduate.img) }}" alt="etudiant" class="student-card__image">
+                        </div>
+                        <div class="student-card__content">
+                            <h3 class="student-card__content__name">{{ graduate.firstName }}  {{ graduate.lastName }}</h3>
+                            <p class="student-card__content__period">{{ graduate.promo }} {{ graduate.promo+2 }}</p>
+                        </div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        document.querySelector(".filter-button").addEventListener("click", () => {
+            document.querySelector(".filter-popup").classList.toggle("invisible");
+        });
+    </script>
+{% endblock %}

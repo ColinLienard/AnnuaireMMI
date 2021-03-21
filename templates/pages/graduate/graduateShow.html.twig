@@ -1,0 +1,69 @@
+{% extends "base.html.twig" %}
+{% block title %}MMI Space - Les Diplomés{% endblock %}
+
+{% block body %}
+    <header class="student-header">
+        <img src="{{ asset('data/img/user/' ~ graduate.img) }}" alt="etudiant" class="student-header__image">
+        <h2 class="student-header__title">{{ graduate.firstName }} {{ graduate.lastName }}</h2>
+        <p class="student-header__subtitle">En MMI entre {{ graduate.promo }} et {{ graduate.promo+2 }}.</p>
+        <a href="{{ path('graduate.list') }}" class="student-header__back-button">
+            <img src="{{ asset('data/svg/arrow-white.svg') }}" alt="arrow" class="student-header__back-button__arrow">
+        </a>
+    </header>
+
+    <section class="student-content">
+        <div class="student-content__card-grid">
+            {% if graduate.job != null and graduate.company != null and graduate.zoneActivity != null %}
+                <div class="student-content__card">
+                    <h3 class="student-content__card__title">Poste actuel</h3>
+                    <p class="student-content__card__description">{{ graduate.job }} chez {{ graduate.company }} à {{ graduate.zoneActivity }}.</p>
+                </div>
+            {% endif %}
+            <div class="student-content__card">
+                <h3 class="student-content__card__title">Après MMI</h3>
+                <p class="student-content__card__description">LP Métiers du Numérique à La Rochelle. Alternance réalisée chez Legrand.</p>
+            </div>
+            <div class="student-content__card">
+                <h3 class="student-content__card__title">Type de bac</h3>
+                <p class="student-content__card__description">{{ graduate.bac }}</p>
+            </div>
+        </div>
+        <h3 class="student-content__subtitle">Contacts</h3>
+        <div class="student-content__contact-container">
+            <img src="{{ asset('data/svg/mail.svg') }}" alt="mail" class="student-content__contact-container__image">
+            <p class="student-content__contact-container__contact">{{ graduate.email }}</p>
+        </div>
+        {% if graduate.portfolio != null %}
+            <div class="student-content__contact-container">
+                <img src="{{ asset('data/svg/world.svg') }}" alt="world" class="student-content__contact-container__image">
+                <a href="{{ graduate.portfolio }}" class="student-content__contact-container__contact">{{ graduate.portfolio }}</a>
+            </div>
+        {% endif %}
+        <ul class="student-content__network-list">
+            {% if graduate.linkedin != null %}
+            <li class="student-content__network">
+                <a href="{{ graduate.linkedin }}" class="student-content__network__link"></a>
+                <img src="{{ asset('data/svg/linkedin.svg') }}" alt="linkedin" class="student-content__network__image">
+            </li>
+            {% endif %}
+            {% if graduate.behance != null %}
+            <li class="student-content__network">
+                <a href="{{ graduate.behance }}" class="student-content__network__link"></a>
+                <img src="{{ asset('data/svg/behance.svg') }}" alt="behance" class="student-content__network__image">
+            </li>
+            {% endif %}
+            {% if graduate.instagram != null %}
+            <li class="student-content__network">
+                <a href="{{ graduate.instagram }}" class="student-content__network__link"></a>
+                <img src="{{ asset('data/svg/instagram.svg') }}" alt="instagram" class="student-content__network__image">
+            </li>
+            {% endif %}
+            {% if graduate.facebook != null %}
+            <li class="student-content__network">
+                <a href="{{ graduate.facebook }}" class="student-content__network__link"></a>
+                <img src="{{ asset('data/svg/facebook.svg') }}" alt="facebook" class="student-content__network__image">
+            </li>
+            {% endif %}
+        </ul>
+    </section>
+{% endblock %}

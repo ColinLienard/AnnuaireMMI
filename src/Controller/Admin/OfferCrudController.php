@@ -43,9 +43,17 @@ class OfferCrudController extends AbstractCrudController
             TextField::new('company','Entreprise')
                 ->onlyOnForms(),
             ChoiceField::new('domain','Domaine')
-                ->setChoices(["Communication" => "Communication","Graphisme" => "Graphisme","Développement" => "Développement"]),
+                ->setChoices([
+                    "Communication" => "Communication",
+                    "Graphisme" => "Graphisme",
+                    "Développement" => "Développement"
+                ]),
             ChoiceField::new('type','Type de contrat')
-                ->setChoices(["Non renseigné" => "Non renseigné","CDD" => "CDD","CDI" => "CDI"]),
+                ->setChoices([
+                    "Non renseigné" => "Non renseigné",
+                    "CDD" => "CDD",
+                    "CDI" => "CDI"
+                ]),
             IntegerField::new("department","Département"),
             TextField::new("city","Ville"),
             TextEditorField::new('description','Description')

@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1ce222-b6af-4488-abff-83d327aff4b6" name="Default Changelist" comment="BackEnd des offres d'emploi + instance CkEDITOR (offer)">
-      <change afterPath="$PROJECT_DIR$/src/Controller/OffersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/offer/offerList.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/offer/offerShow.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MMI-Space.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MMI-Space.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="7b1ce222-b6af-4488-abff-83d327aff4b6" name="Default Changelist" comment="Modification BDD offre + user + login">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210321143553.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210321175333.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210321182239.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210321182755.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210321214926.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/behance.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/facebook.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/instagram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/linkedin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/mail.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/pen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/svg/world.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/GraduatesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Training.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/TrainingRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/graduate/graduateList.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/graduate/graduateShow.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210314173643.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210314183409.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210315200055.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticlesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticlesCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/OfferCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/OfferCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Offer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/article/articleList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/article/articleList.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/SecurityControllerAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/SecurityControllerAuthenticator.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +164,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -179,8 +189,9 @@
       <recent name="C:\wamp64\www\projetTutS4\MMI-Space\public\data\img\others" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\projetTutS4\MMI-Space\templates\pages\article" />
+      <recent name="C:\wamp64\www\projetTutS4\MMI-Space\public\data\svg" />
       <recent name="C:\wamp64\www\projetTutS4\MMI-Space\public\css" />
+      <recent name="C:\wamp64\www\projetTutS4\MMI-Space\templates\pages\article" />
     </key>
   </component>
   <component name="RunManager">
@@ -208,7 +219,13 @@
       <workItem from="1615741330663" duration="14567000" />
       <workItem from="1615796802728" duration="24267000" />
       <workItem from="1615901475513" duration="17310000" />
-      <workItem from="1615988623146" duration="318000" />
+      <workItem from="1615988623146" duration="618000" />
+      <workItem from="1616160357679" duration="687000" />
+      <workItem from="1616174684189" duration="10928000" />
+      <workItem from="1616246232979" duration="7205000" />
+      <workItem from="1616322778229" duration="5738000" />
+      <workItem from="1616336397130" duration="8670000" />
+      <workItem from="1616353082703" duration="7113000" />
     </task>
     <task id="LOCAL-00001" summary="Symfony 5.2">
       <created>1615740157493</created>
@@ -259,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615850433086</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Modification BDD offre + user + login">
+      <created>1615989231795</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1615989231795</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +302,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Symfony 5.2" />
     <MESSAGE value="Ckeditor" />
     <MESSAGE value="Ckeditor + Elfinder configuration" />
@@ -285,7 +310,19 @@
     <MESSAGE value="Admin article + view article &#10;Manque:&#10;  - Affiche article seulement&#10;  - Image Admin Article" />
     <MESSAGE value="Affichage Article" />
     <MESSAGE value="BackEnd des offres d'emploi + instance CkEDITOR (offer)" />
-    <option name="LAST_COMMIT_MESSAGE" value="BackEnd des offres d'emploi + instance CkEDITOR (offer)" />
+    <MESSAGE value="Modification BDD offre + user + login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification BDD offre + user + login" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/Admin/BacCrudController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

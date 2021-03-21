@@ -2,6 +2,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 body {
   overflow-x: hidden;
+  position: relative;
+  padding-top: 7rem;
+}
+
+.menu {
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -50vw;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 0 0 rgba(27, 27, 27, 0);
+          box-shadow: 0 0 0 rgba(27, 27, 27, 0);
+  padding: 12rem 2.5rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 98;
+  -webkit-transition: 0.6s cubic-bezier(0.6, 0, 0.4, 1);
+  transition: 0.6s cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+.menu.visible {
+  right: 0;
+  -webkit-box-shadow: 0 0 6rem rgba(27, 27, 27, 0.3);
+          box-shadow: 0 0 6rem rgba(27, 27, 27, 0.3);
+}
+
+.menu__element {
+  margin-bottom: 2rem;
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: .9rem;
+  color: #1b1b1b;
 }
 
 .nav {
@@ -15,8 +54,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2.2rem;
-  position: relative;
+  padding: 2.2rem 2.2rem 1.5rem 2.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #FFF;
+  z-index: 99;
 }
 
 .nav__logo {
@@ -76,9 +120,17 @@ body {
   position: relative;
 }
 
+.nav__user__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .nav__user__image {
   width: 2.6rem;
   height: 2.6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: .5rem;
 }
 
@@ -158,8 +210,14 @@ body {
 }
 
 .main__grid {
+  margin-top: 1.25rem;
+  width: 100%;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
 }
 
 .main__paragraph {
@@ -270,11 +328,12 @@ body {
   top: 100%;
   background-color: #FFF;
   width: 100%;
+  -webkit-transition: 0.3s cubic-bezier(0.6, 0, 0.4, 1);
+  transition: 0.3s cubic-bezier(0.6, 0, 0.4, 1);
+  z-index: 1;
   -webkit-box-shadow: 0 0.6rem 1rem rgba(90, 56, 253, 0.08);
           box-shadow: 0 0.6rem 1rem rgba(90, 56, 253, 0.08);
   border-radius: .5rem;
-  -webkit-transition: 0.3s cubic-bezier(0.6, 0, 0.4, 1);
-  transition: 0.3s cubic-bezier(0.6, 0, 0.4, 1);
 }
 
 .main__popup.invisible {
@@ -453,8 +512,162 @@ body {
   color: #FFF;
 }
 
+.main__form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__form__group__element {
+  margin-left: 1rem;
+}
+
+.main__profil-picture {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__profil-picture__container {
+  margin: 0 auto;
+  position: relative;
+}
+
+.main__profil-picture__image {
+  width: 6.5rem;
+  height: 6.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0.6rem 1rem rgba(90, 56, 253, 0.08);
+          box-shadow: 0 0.6rem 1rem rgba(90, 56, 253, 0.08);
+}
+
+.main__profil-picture__edit {
+  background-color: #EC6D8B;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -.5rem;
+  right: -.5rem;
+}
+
+.main__profil-picture__edit__link {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__profil-picture__edit__image {
+  width: .8rem;
+  height: .8rem;
+}
+
 .student-card {
+  background-color: rgba(236, 109, 139, 0.2);
+  border-radius: .5rem;
+}
+
+.student-card__image-container {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.student-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: .5rem;
+}
+
+.student-card__content {
+  padding: .4rem;
+}
+
+.student-card__content__name {
+  margin-bottom: .2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: .9rem;
+  color: #1b1b1b;
+  font-size: .6rem;
+}
+
+.student-card__content__period {
+  font-family: "Poppins", sans-serif;
+  font-size: .6rem;
+  line-height: 120%;
+  color: rgba(27, 27, 27, 0.4);
+  color: #1b1b1b;
+}
+
+.teacher {
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 1.25rem;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0.6rem 1rem rgba(90, 56, 253, 0.08);
+          box-shadow: 0 0.6rem 1rem rgba(90, 56, 253, 0.08);
+}
+
+.teacher__image {
+  width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: .5rem;
+}
+
+.teacher__content {
+  padding: 1rem;
+}
+
+.teacher__content__name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: .9rem;
+  color: #1b1b1b;
+  margin-bottom: .3rem;
+}
+
+.teacher__content__infos {
+  font-family: "Poppins", sans-serif;
+  font-size: .6rem;
+  line-height: 120%;
+  color: rgba(27, 27, 27, 0.4);
+  color: #1b1b1b;
+}
+
+.teacher__content__description {
+  font-family: "Poppins", sans-serif;
+  font-size: .75rem;
+  line-height: 120%;
+  color: #1b1b1b;
+  margin: .5rem 0 .5rem 0;
+}
+
+.teacher__content__mail {
+  font-family: "Poppins", sans-serif;
+  font-size: .75rem;
+  line-height: 120%;
+  color: #1b1b1b;
+  color: #EC6D8B;
 }
 
 .news {
@@ -499,7 +712,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: .6rem;
   line-height: 120%;
-  color: rgba(27, 27, 27, 0.3);
+  color: rgba(27, 27, 27, 0.4);
 }
 
 .news__content__arrow {
@@ -538,7 +751,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: .6rem;
   line-height: 120%;
-  color: rgba(27, 27, 27, 0.3);
+  color: rgba(27, 27, 27, 0.4);
 }
 
 .news-header__date {
@@ -548,7 +761,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: .6rem;
   line-height: 120%;
-  color: rgba(27, 27, 27, 0.3);
+  color: rgba(27, 27, 27, 0.4);
 }
 
 .news-header__back-button {
@@ -630,7 +843,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: .6rem;
   line-height: 120%;
-  color: rgba(27, 27, 27, 0.3);
+  color: rgba(27, 27, 27, 0.4);
 }
 
 .offer__button {
@@ -691,7 +904,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: .6rem;
   line-height: 120%;
-  color: rgba(27, 27, 27, 0.3);
+  color: rgba(27, 27, 27, 0.4);
 }
 
 .offer-header__back-button {
@@ -735,5 +948,192 @@ body {
   font-weight: 800;
   font-size: .9rem;
   color: #1b1b1b;
+}
+
+.student-header {
+  margin-top: 1rem;
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.student-header__image {
+  width: 6.5rem;
+  height: 6.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0.6rem 1rem rgba(90, 56, 253, 0.08);
+          box-shadow: 0 0.6rem 1rem rgba(90, 56, 253, 0.08);
+}
+
+.student-header__title {
+  margin: 1rem 0 .5rem 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #1b1b1b;
+}
+
+.student-header__subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: .75rem;
+  line-height: 120%;
+  color: #1b1b1b;
+}
+
+.student-header__back-button {
+  position: absolute;
+  top: -1rem;
+  left: 2.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EC6D8B;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.7rem;
+  border-radius: .5rem;
+}
+
+.student-header__back-button__arrow {
+  width: 1.3rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.student-content {
+  margin: 1.5rem 3rem;
+}
+
+.student-content__card-grid {
+  margin-top: 1.25rem;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1rem;
+}
+
+.student-content__card {
+  background-color: rgba(253, 226, 234, 0.25);
+  padding: 1rem .4rem;
+  border-radius: .5rem;
+}
+
+.student-content__card__title {
+  margin-bottom: .5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: .9rem;
+  color: #1b1b1b;
+}
+
+.student-content__card__description {
+  font-family: "Poppins", sans-serif;
+  font-size: .75rem;
+  line-height: 120%;
+  color: #1b1b1b;
+}
+
+.student-content__subtitle {
+  margin: 2.5rem 0 .6rem 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: .9rem;
+  color: #1b1b1b;
+}
+
+.student-content__contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem;
+}
+
+.student-content__contact-container__image {
+  width: 1.5rem;
+  opacity: .15;
+}
+
+.student-content__contact-container__contact {
+  margin-left: .5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: .75rem;
+  line-height: 120%;
+  color: #1b1b1b;
+}
+
+.student-content__network-list {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.student-content__network {
+  position: relative;
+}
+
+.student-content__network__link {
+  width: 2.2rem;
+  height: 2.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.student-content__network__image {
+  width: 2.2rem;
+  margin-right: 1.5rem;
+}
+
+.up {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #EC6D8B;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s cubic-bezier(0.6, 0, 0.4, 1);
+  transition: 0.3s cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+.up.invisible {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.up__image {
+  width: 1.5rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 /*# sourceMappingURL=style.css.map */

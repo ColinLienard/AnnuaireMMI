@@ -30,13 +30,24 @@ class ArticlesCrudController extends AbstractCrudController
 
     }
 
+    public function createEntity(string $entityFqcn)
+    {
+        $article = new Articles();
+        $user = $this->getUser();
+        $author = $user->getFirstName() . " " . $user->getLastName();
+        $article->setAuthor($author);
+
+        return $article;
+    }
+
     public function configureFields(string $pageName): iterable
     {
         return [
             IdField::new("id")
                 ->onlyOnIndex(),
             TextField::new("title","Titre"),
-            TextField::new("author","Auteur"),
+            TextField::new("author","Auteur")
+                ->onlyOnIndex(),
             ImageField::new("img","Miniature")
                 ->setBasePath("/data/img/article")
                 ->setUploadDir('public/data/img/article')
