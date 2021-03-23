@@ -1,0 +1,90 @@
+{% extends "base.html.twig" %}
+{% block title %}MMI Space - Profil {% endblock %}
+
+{% block body %}
+
+    <header class="header">
+        <h1 class="header__title">Votre profil</h1>
+    </header>
+
+    <section class="main">
+        {#
+        {{ form_start(form) }}
+            <div class="main__profil-picture">
+                <div class="main__profil-picture__container">
+                    <img src="{{ asset('data/img/user/' ~ app.user.img) }}" alt="user" class="main__profil-picture__image">
+                    <div class="main__profil-picture__edit">
+                        <a href="#" class="main__profil-picture__edit__link">
+                            <img src="{{ asset('data/svg/pen.svg') }}" alt="pen" class="main__profil-picture__edit__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main__form__group">
+                <div>
+                    <h3 class="main__form__title">Prénom</h3>
+                    {{ form_widget(form.firstName,{'attr': {'class': 'main__form__input', 'placeholder': 'Votre prénom...', 'value': app.user.firstName}}) }}
+                </div>
+
+                <div class="main__form__group__element">
+                    <h3 class="main__form__title">Nom</h3>
+                    {{ form_widget(form.lastName,{'attr': {'class': 'main__form__input', 'placeholder': 'Votre nom...', 'value': app.user.lastName}}) }}
+                </div>
+            </div>
+            <h3 class="main__form__title">Adresse mail</h3>
+            {{ form_widget(form.email,{'attr': {'class': 'main__form__input', 'placeholder': 'Votre adresse mail...', 'value': app.user.email}}) }}
+            <h3 class="main__form__title">Mot de passe</h3>
+            {{ form_help(form.password) }}
+            {{ form_widget(form.password,{'attr': {'class': 'main__form__input', 'placeholder': 'Votre mot de passe...'}}) }}
+            {#
+
+            #}
+
+            {% if app.user.isEduc == 0 %}
+                <h3 class="main__form__title">Promo (Année d'arrivé)</h3>
+                {{ form_widget(form.promo,{'attr': {'class': 'main__form__input','placeholder': '2019', 'value': app.user.promo}}) }}
+                <h3 class="main__form__title">Bac d'origine</h3>
+                {{ form_widget(form.bac,{'attr': {'class': 'main__form__input'}}) }}
+                <h3 class="main__form__title">Porfolio</h3>
+                {{ form_widget(form.portfolio,{'attr': {'class': 'main__form__input', 'placeholder': 'audrey-moutat.fr', 'value': app.user.portfolio}}) }}
+                <h3 class="main__form__title">LinkedIn</h3>
+                {{ form_widget(form.linkedin,{'attr': {'class': 'main__form__input', 'placeholder': 'https://www.linkedin.com/in/reda-guedira/', 'value': app.user.linkedin}}) }}
+                <h3 class="main__form__title">Instagram</h3>
+                {{ form_widget(form.instagram,{'attr': {'class': 'main__form__input', 'placeholder': 'https://www.instagram.com/leslovetrotteurs/', 'value': app.user.instagram}}) }}
+                <h3 class="main__form__title">Behance</h3>
+                {{ form_widget(form.behance,{'attr': {'class': 'main__form__input', 'placeholder': 'https://www.behance.net/mmi', 'value': app.user.behance}}) }}
+                <h3 class="main__form__title">Facebook</h3>
+                {{ form_widget(form.facebook,{'attr': {'class': 'main__form__input', 'placeholder': 'https://www.facebook.com/kidcudi', 'value': app.user.facebook}}) }}
+                <h3 class="main__form__title">Domaine de poursuite d'étude</h3>
+                {{ form_widget(form.PE,{'attr': {'class': 'main__form__input'}})  }}
+                <h3 class="main__form__title">Domaine d'insertion professionel</h3>
+                {{ form_widget(form.IP,{'attr': {'class': 'main__form__input'}}) }}
+                <h3 class="main__form__title">Métier</h3>
+                {{ form_widget(form.job,{'attr': {'class': 'main__form__input', 'placeholder': 'Community manager', 'value': app.user.job}}) }}
+                <h3 class="main__form__title">Lieu d'activité</h3>
+                {{ form_widget(form.zoneActivity,{'attr': {'class': 'main__form__input', 'placeholder': 'Limoges', 'value': app.user.zoneActivity}}) }}
+                <h3 class="main__form__title">Entreprise</h3>
+                {{ form_widget(form.company,{'attr': {'class': 'main__form__input', 'placeholder': 'Emakina', 'value': app.user.company}}) }}
+
+            {% endif %}
+            {% if app.user.isEduc == 1 %}
+                <h3 class="main__form__title">Année d'arrivé dans le département MMI</h3>
+                {{ form_widget(form.promo,{'attr': {'class': 'main__form__input','placeholder': '2019', 'value': app.user.promo}}) }}
+                <h3 class="main__form__title">Profession</h3>
+                {{ form_widget(form.profession,{'attr': {'class': 'main__form__input','placeholder': 'Maitre de conférences', 'value': app.user.profession}}) }}
+                <h3 class="main__form__title">Rôle</h3>
+                {{ form_widget(form.status,{'attr': {'class': 'main__form__input','placeholder': 'Maitre de conférences', 'value': app.user.status}}) }}
+                <h3 class="main__form__title">Description</h3>
+                {{ form_widget(form.description,{'attr': {'class': 'main__form__input','placeholder': 'Maitre de conférences', 'label': app.user.description}}) }}
+            {% endif %}
+
+            {{ form_widget(form._token) }}
+            {{ form_widget(form.save,{'attr': {'class': 'main__form__button'},'label':'Enregistrer les modifications'}) }}
+
+        {{ form_end(form, {'render_rest': false}) }}
+        #}
+    </section>
+
+{% endblock %}
+

@@ -132,6 +132,11 @@ class User implements UserInterface
      */
     private $behance;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $profession;
+
     public function __construct()
     {
         $this->training = new ArrayCollection();
@@ -408,21 +413,6 @@ class User implements UserInterface
 
     public function getBac(): ?Bac
     {
-        /*if($this->bac == "L" ){
-            return "Littéraire (L)";
-        }
-        if($this->bac == "ES" ){
-            return "Économique et social (ES)";
-        }
-        if($this->bac == "S" ){
-            return "Scientifique (S)";
-        }
-        if($this->bac == "STI2D" ){
-            return "Sciences et technologies de l'industrie et du développement durable (STI2D)";
-        }
-        if($this->bac == "STD2A" ){
-            return "Sciences et technologies du design et des arts appliqués (STD2A)";
-        }*/
 
         return $this->bac;
 
@@ -492,6 +482,18 @@ class User implements UserInterface
     public function setBehance(?string $behance): self
     {
         $this->behance = $behance;
+
+        return $this;
+    }
+
+    public function getProfession(): ?string
+    {
+        return $this->profession;
+    }
+
+    public function setProfession(?string $profession): self
+    {
+        $this->profession = $profession;
 
         return $this;
     }

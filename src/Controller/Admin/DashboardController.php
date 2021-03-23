@@ -38,6 +38,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section("Utilisateurs");
         yield MenuItem::linkToCrud("Liste","fa fa-users",User::class);
         yield MenuItem::linkToCrud("Bac d'origine","fa fa-graduation-cap", Bac::class);
-        //yield MenuItem::linkToCrud('Inviter','fa fa-user-plus');
+        yield MenuItem::linkToRoute('Inviter','fa fa-user-plus',"mail");
+        #yield MenuItem::linkToCrud(,MailController::class);
     }
 }
